@@ -1,51 +1,29 @@
-# Личный проект «{{projectTitle}}»
+# Kekstagram — Standalone Photo Sharing Service (Graduation Project)
 
-* Студент: [{{userName}}]({{userProfile}}).
-* Наставник: `Неизвестно`.
+A modern client-side single-page web application for uploading, editing, and discovering photos. Developed as a graduation project for the Professional JavaScript Developer course at HTML Academy.
 
----
+*Note: The UI/UX layouts, styling, and DOM templates were provided by the academy. My objective was to engineer the complete client-side architecture, reactive state operations, dynamic UI synchronization, in-memory data processing, and custom form validation engines from scratch.*
 
-_Не удаляйте и не изменяйте самовольно файлы и папки:_
-_`.editorconfig`, `.eslintrc`, `.gitattributes`, `.gitignore`, `package-lock.json`, `package.json`., `.github`_
+## 🛠 Tech Stack & Tooling
+- **Core Language:** Pure JavaScript (Vanilla ES6+)
+- **DOM & Templating:** High-performance native manipulation, custom micro-templates via `<template>`.
+- **Validation Engine:** Integrated with Pristine.js for strict client-side validation constraint control.
+- **Image Editing:** Built-in scale controller and dynamic overlay filters (Chrome, Sepia, Marvin, Phobos, Heat).
+- **Style Pipelines:** Automated build routines and localized assets distribution.
 
----
+## 💡 Key Technical & Architectural Features Engineered by Me:
+- **100% Offline Autonomy:** Fully refactored the data-fetching architecture to break dependencies on legacy Academy servers. Integrated a structured local database (`mocks.js`) providing resilient mock profiles, comment trees, and user metrics without any network latency.
+- **Advanced In-Memory Filtering:** Developed a powerful client-side filter controller supporting three independent view modes:
+  - `Default`: Displays the entire localized data collection.
+  - `Random`: Implements the Fisher-Yates shuffle algorithm to generate a randomized sample of exactly 10 photos on each toggle.
+  - `Discussed`: Performs high-performance array sorting based on nested comment tree complexity.
+- **Client-Side Asset Preview:** Implemented a secure pipeline using the native `FileReader` API. User-selected local images are previewed reactively in the workspace and systematically cloned across all real-time filter effect layers.
+- **Comprehensive Form Constraints:** Configured intricate data validation workflows to intercept manual uploads. Enforced dynamic hashtag metrics (duplicate checking, character counts, special character tracking via regular expressions) and strict comment boundaries.
 
-[Как работать с Git на проекте](Contributing.md) | [Как работать над проектом](Workflow.md)
+## ⚙️ How to Run Locally
 
-### Памятка
-
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-Откройте репозиторий и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/35275222-1d624452-0050-11e8-8aca-06d2832724ce.png">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/35275223-1d7cf9fa-0050-11e8-829b-98ac3c9a4f8b.png">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/35275224-1d97a7dc-0050-11e8-89f9-41c9a7b2ae9c.png">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
-```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/javascript"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/javascript/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[JavaScript. Профессиональная разработка веб-интерфейсов](https://htmlacademy.ru/intensive/javascript)» от [HTML Academy](https://htmlacademy.ru).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com
+   ```
+2. Open `index.html` via a local server environment (e.g., Live Server extension in VS Code).
